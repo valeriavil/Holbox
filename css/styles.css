@@ -1,0 +1,233 @@
+/* ========= RESET ========= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#ffffff;
+    color:#333;
+}
+
+/* ========= HEADER ========= */
+.header{
+    position:fixed; /* ← esto lo hace fijo */
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+
+    background:rgba(255,255,255,0.9);
+    backdrop-filter: blur(8px); /* efecto elegante */
+    border-bottom:1px solid #eee;
+
+    z-index:1000;
+}
+
+.header h1{
+    color:#e91e63;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#444;
+    font-weight:600;
+    transition:0.2s;
+}
+
+nav a:hover{
+    color:#e91e63;
+}
+
+/* ========= HERO ========= */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 60px;
+    gap:40px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h2{
+    font-size:2.8rem;
+    color:#e91e63;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    line-height:1.7;
+    margin-bottom:15px;
+    max-width:600px;
+}
+
+/* Imagen hero */
+.hero-img{
+    flex:1;
+}
+
+.hero-img img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* ========= BOTÓN ========= */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 25px;
+    background:#e91e63;
+    color:#fff;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+    border:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#d81b60;
+}
+
+/* ========= SECCIONES SPLIT ========= */
+.split{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:70px 60px;
+    gap:50px;
+}
+
+.split.reverse{
+    flex-direction:row-reverse;
+}
+
+/* TEXTO */
+.text{
+    flex:1;
+}
+
+.text h2{
+    color:#e91e63;
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+.text p{
+    line-height:1.7;
+    margin-bottom:12px;
+}
+
+/* IMAGEN */
+.image{
+    flex:1;
+}
+
+.image img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* ========= GALERÍA ========= */
+#galeria{
+    padding:70px 60px;
+}
+
+#galeria h2{
+    text-align:center;
+    color:#e91e63;
+    margin-bottom:30px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:15px;
+}
+
+.galeria img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.03);
+}
+
+/* ========= CONCLUSIÓN ========= */
+#contacto{
+    padding:70px 60px;
+    text-align:center;
+}
+
+#contacto h2{
+    color:#e91e63;
+    margin-bottom:20px;
+}
+
+#contacto p{
+    max-width:700px;
+    margin:10px auto;
+    line-height:1.7;
+}
+
+/* ========= FOOTER ========= */
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #eee;
+    color:#666;
+}
+
+/* ========= RESPONSIVE ========= */
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+        padding:20px;
+    }
+
+    .hero{
+        flex-direction:column;
+        padding:40px 20px;
+    }
+
+    .split{
+        flex-direction:column;
+        padding:40px 20px;
+    }
+
+    .split.reverse{
+        flex-direction:column;
+    }
+
+    .hero-text h2{
+        font-size:2rem;
+    }
+
+    .text h2{
+        font-size:1.6rem;
+    }
+}
